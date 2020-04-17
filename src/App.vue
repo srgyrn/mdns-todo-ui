@@ -1,32 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <section class="hero is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Simple to-do list
+          </h1>
+          <h2 class="subtitle">
+            Keeps track of your chores!
+          </h2>
+        </div>
+      </div>
+    </section>
+    <List></List>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import List from "./components/List";
 
-#nav {
-  padding: 30px;
-}
+export default {
+  name: "App",
+  components: { List }
+};
+</script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style lang="css">
+@import "~bulma/css/bulma.min.css";
 </style>
